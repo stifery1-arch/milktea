@@ -83,6 +83,41 @@ const PAY_CONFIG = {
 
 要加新作者：在 `tools/fetch-feeds.mjs` 的 `AUTHORS` 数组里加一条 `{ mid, name, keep }`（`mid` 是 B 站 UID，在空间页地址栏里）。
 
+## 更新机制（三层）
+
+作者新视频的同步有三层保障，越靠前越实时：
+
+**① 本机定时同步（主要，每 6 小时）**
+
+Windows 计划任务 `MilkteaSync` 每 6 小时运行 `tools/sync-and-push.ps1`：
+抓取 → 有变化就提交 → 推送。推送会触发 CI，自动部署到两个站点。
+
+> **为什么必须在你的电脑上跑？**
+> B站风控是**按 IP 段**限流的。实测：
+> - GitHub Actions runner（Azure）→ `412` / `code=-799`
+> - Cloudflare 边缘节点 → 同样 `412`
+> - **你的家庭宽带 IP → 正常** ✅
+>
+> 所以定时抓取放在本机最可靠。
+
+管理命令：
+```powershell
+Get-ScheduledTask -TaskName MilkteaSync                    # 查看状态
+Start-ScheduledTask -TaskName MilkteaSync                  # 手动跑一次
+Unregister-ScheduledTask -TaskName MilkteaSync -Confirm:$false   # 卸载
+Get-Content .\sync.log -Tail 30                            # 看日志
+```
+
+**② Cloudflare Pages Function（`/api/bilibili`）**
+
+页面优先请求这个接口，它带 6 小时边缘缓存（缓存过期后第一个访客触发刷新，不需要 cron）。
+抓取同样是三级降级：空间接口 → 详情接口 → 站点静态 JSON。
+在机房 IP 被 B站拦截时，它会自动退回静态数据，不会让页面开天窗。
+
+**③ 构建时抓取**
+
+CI 每次运行都会跑 `tools/fetch-feeds.mjs`，结果提交回仓库作为兜底数据。
+
 ## 平台限制（实测结论）
 
 - **B站**：可以 iframe 内嵌播放 ✅（播放器地址不能写 `//` 开头，必须带 `https:`）
