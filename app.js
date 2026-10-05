@@ -584,12 +584,18 @@ function renderWall() {
  */
 async function loadFeeds() {
   if (!document.getElementById("wallSections")) return;
-  let feed;
-  try {
-    const res = await fetch("data/bilibili.json", { cache: "no-store" });
-    if (!res.ok) return;
-    feed = await res.json();
-  } catch (e) { return; }
+  // 优先走实时接口（Cloudflare Pages Function，6 小时自动刷新，不依赖任何定时任务）
+  // 拿不到就退回构建时生成的本地 JSON
+  let feed = null;
+  for (const url of ["/api/bilibili", "data/bilibili.json"]) {
+    try {
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) continue;
+      const j = await res.json();
+      if (j && Array.isArray(j.authors) && j.authors.length) { feed = j; break; }
+    } catch (e) { /* 换下一个来源 */ }
+  }
+  if (!feed) return;
 
   const sec = WALL_SECTIONS.find(s => s.id === "bilibili");
   const authors = Array.isArray(feed.authors) ? feed.authors : [];
