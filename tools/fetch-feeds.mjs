@@ -55,7 +55,7 @@ const mmss = (s) => {
 };
 
 /** 带重试的 fetch —— 风控是概率性的，多试几次能显著提高成功率 */
-async function get(url, { referer, tries = 4, binary = false } = {}) {
+async function get(url, { referer, tries = 6, binary = false } = {}) {
   let lastErr;
   for (let i = 1; i <= tries; i++) {
     try {
@@ -68,8 +68,9 @@ async function get(url, { referer, tries = 4, binary = false } = {}) {
     } catch (e) {
       lastErr = e;
       if (i < tries) {
-        const wait = 1500 * i;
-        console.warn(`  · 第 ${i} 次失败（${e.message}），${wait}ms 后重试`);
+        // B 站风控是渐进式的，退避给足，避免刚被限流就连续撞墙
+        const wait = Math.min(3000 * Math.pow(2, i - 1), 30000);
+        console.warn(`  · 第 ${i} 次失败（${e.message}），${Math.round(wait / 1000)}s 后重试`);
         await sleep(wait);
       }
     }
@@ -145,6 +146,17 @@ async function downloadCover(video) {
   }
 
 
+
+  // 只清理自动生成的 .webp 封面；手工挑选的 .jpg 一律不动
+  if (fs.existsSync(COVER_DIR)) {
+    const used = new Set(out.authors.flatMap((a) => a.videos.map((v) => path.basename(v.cover))));
+    for (const f of fs.readdirSync(COVER_DIR)) {
+      if (f.endsWith('.webp') && !used.has(f)) {
+        fs.unlinkSync(path.join(COVER_DIR, f));
+        console.log(`  · 清理过期封面 ${f}`);
+      }
+    }
+  }
 
   fs.writeFileSync(
     path.join(DATA_DIR, 'bilibili.json'),
