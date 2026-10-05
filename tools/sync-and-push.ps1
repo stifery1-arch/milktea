@@ -1,18 +1,25 @@
 ﻿# 定时同步作者最新视频 → 提交 → 推送
-# 由 Windows 计划任务调用（见 README 的「本机定时同步」一节）
+# 由 Windows 计划任务 MilkteaSync 每天 09:00 调用
 #
 # 为什么要在本机跑：
 #   B站风控按 IP 段限流，GitHub runner 和 Cloudflare 机房 IP 都会被 412，
 #   只有住宅宽带 IP 能稳定调用。所以定时抓取放在你自己的电脑上最可靠。
 
 $ErrorActionPreference = 'Continue'
+
+# 让管道里的中文不乱码：Node 输出 UTF-8，而 Windows PowerShell 5.1 默认按 GBK 解码
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+$OutputEncoding = [System.Text.Encoding]::UTF8
+
 $site = Split-Path -Parent $PSScriptRoot
 $log  = Join-Path $site 'sync.log'
 $safe = $site -replace '\\', '/'
+$utf8 = New-Object System.Text.UTF8Encoding($false)
 
 function Log($msg) {
   $line = "[{0}] {1}" -f (Get-Date -Format 'yyyy-MM-dd HH:mm:ss'), $msg
-  $line | Tee-Object -FilePath $log -Append
+  Write-Host $line
+  [System.IO.File]::AppendAllText($log, $line + [Environment]::NewLine, $utf8)
 }
 
 Log '=== 开始同步 ==='
