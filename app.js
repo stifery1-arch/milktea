@@ -354,7 +354,7 @@ const WALL_SECTIONS = [
         video: {
           title: "分段独立 LoRA / 公用 LoRA",
           duration: "03:08",
-          cover: "https://i2.hdslb.com/bfs/archive/33f3539b1f7a342d8fa37d0c061d109f3e51f10f.jpg",
+          cover: "videos/bilibili/BV1xAao6nE82.jpg",
           embed: "https://player.bilibili.com/player.html?bvid=BV1xAao6nE82&high_quality=1&danmaku=0"
         },
         text: "Minimax H3 导演台支持每个分段独立设置 LoRA、公用 LoRA，一个全能工作流玩转音画同步、文生视频、图生视频。" },
@@ -363,7 +363,7 @@ const WALL_SECTIONS = [
         video: {
           title: "全能工作流重磅发布",
           duration: "08:03",
-          cover: "https://i1.hdslb.com/bfs/archive/e67369cc5c2ab117ea02620d69a1877d4a2a2535.jpg",
+          cover: "videos/bilibili/BV1Tquc6gERB.jpg",
           embed: "https://player.bilibili.com/player.html?bvid=BV1Tquc6gERB&high_quality=1&danmaku=0"
         },
         text: "一个工作流玩转 Minimax：音画同步、文生视频、图生视频、首尾帧、参考图生视频，全都串在一条线上。" },
@@ -372,7 +372,7 @@ const WALL_SECTIONS = [
         video: {
           title: "导演台荣获 MiniMax 官方点名",
           duration: "13:09",
-          cover: "https://i0.hdslb.com/bfs/archive/e7f9e4db314dc8b39606140f2dffcd4e3fcd71e4.jpg",
+          cover: "videos/bilibili/BV1Mp8w6cEsN.jpg",
           embed: "https://player.bilibili.com/player.html?bvid=BV1Mp8w6cEsN&high_quality=1&danmaku=0"
         },
         text: "荣幸之至！一切都是建立在优秀的底膜之上 —— 感谢 MiniMax 开源出这么好的模型。" },
@@ -381,7 +381,7 @@ const WALL_SECTIONS = [
         video: {
           title: "无限次采样工作流 · 加速版",
           duration: "03:49",
-          cover: "https://i1.hdslb.com/bfs/archive/7dbc782881a9716597aeee98e5541ea64446225c.jpg",
+          cover: "videos/bilibili/BV1Um8j6MEmk.jpg",
           embed: "https://player.bilibili.com/player.html?bvid=BV1Um8j6MEmk&high_quality=1&danmaku=0"
         },
         text: "直出 2K、一次性出片。加速版把等待时间压下去之后，试错成本低了很多。" },
@@ -493,7 +493,7 @@ function renderWall() {
             <div class="vthumb"${ratio ? ` style="aspect-ratio:${ratio}"` : ""} role="button" tabindex="0" aria-label="播放 ${it.name} 的视频"
                  onclick="playVideo(this)"
                  onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();playVideo(this)}">
-              <span class="vemoji">${it.emoji}</span>${v.cover ? `<img src="${v.cover}" alt="${it.name} 的视频封面" loading="lazy" onerror="this.remove()">` : ""}
+              <span class="vemoji">${it.emoji}</span>${v.cover ? `<img src="${v.cover}" alt="${it.name} 的视频封面" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : ""}
               <span class="vplay">▶</span>
               ${v.duration ? `<span class="vdur">${v.duration}</span>` : ""}
               <span class="pbadge" style="background:${sec.tint};color:${sec.accent}">${sec.name}</span>
