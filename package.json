@@ -8,5 +8,9 @@
     "build": "node tools/fetch-feeds.mjs && node tools/build-site.mjs",
     "build:site": "node tools/build-site.mjs",
     "fetch": "node tools/fetch-feeds.mjs"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
+

@@ -94,6 +94,32 @@ const PAY_CONFIG = {
 推送到 `main` 分支后，`.github/workflows/pages.yml` 会自动发布到 GitHub Pages。
 首次运行会自动开启 Pages；若未生效，手动到 **Settings → Pages → Source** 选择 **GitHub Actions**。
 
+## 部署到 Cloudflare Pages
+
+仓库已内置 Cloudflare Pages 所需的构建配置：
+
+| 配置项 | 值 |
+| --- | --- |
+| 构建命令 | `npm run build` |
+| 输出目录 | `dist` |
+| Node 版本 | 20（由 `.nvmrc` 指定） |
+
+`npm run build` 会先跑 `tools/fetch-feeds.mjs` 同步作者最新视频，
+再用 `tools/build-site.mjs` 把要发布的文件（含 `videos/`、`data/`）复制到 `dist/`。
+构建脚本不会把 `.git` / `.github` / `tools` 暴露成公开文件。
+
+**为什么不用仓库根目录当输出？** 那会把 `.git` 也发布出去。
+
+定时更新有三种方式（任选）：
+
+1. **推送到 main** —— 自动构建
+2. **GitHub Actions 定时任务** —— 每小时的 workflow 会抓取并提交 `data/`，进而触发 Pages 重新构建
+3. **Cloudflare Deploy Hook + Cron Worker** —— 若需要不依赖 GitHub 的定时重建
+
+> ⚠️ Cloudflare Pages 免费版每月 500 次构建。如果配了定时重建，建议每天 1 次（约 30 次/月），不要设成每小时。
+
+## 注意
+
 ## 注意
 
 - 站点是纯静态的，所有路径都是相对路径，放在子目录（`用户名.github.io/仓库名/`）也能正常工作
