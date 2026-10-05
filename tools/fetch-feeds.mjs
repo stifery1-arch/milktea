@@ -12,7 +12,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { execFileSync } from 'node:child_process';
+
 
 const ROOT = process.cwd();
 const DATA_DIR = path.join(ROOT, 'data');
@@ -25,10 +25,15 @@ const AUTHORS = [
 
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
 
-// GitHub 的 ubuntu runner 自带 ffmpeg；本地没有就跳过压缩，不影响功能
-const HAS_FFMPEG = (() => {
-  try { execFileSync('ffmpeg', ['-version'], { stdio: 'ignore' }); return true; } catch { return false; }
-})();
+/**
+ * B 站 CDN 自带图片处理：在图片地址后面拼参数就能拿到缩放/裁剪后的图。
+ *   @720w_405h_1c.webp → 720×405（16:9 裁切）的 webp
+ * 实测原图 277KB → 51KB，比下载原图再本地压缩省事得多，
+ * 也避免了在 CI 上装 ffmpeg（Ubuntu runner 并不预装）。
+ */
+const COVER_SUFFIX = '@720w_405h_1c.webp';
+
+
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const fmtDur = (t) =>
@@ -83,8 +88,10 @@ async function fetchAuthor(mid, keep) {
     duration: mmss(v.length),
     url: `https://www.bilibili.com/video/${v.bvid}/`,
     embed: `https://player.bilibili.com/player.html?bvid=${v.bvid}&high_quality=1&danmaku=0`,
-    cover: `videos/bilibili/${v.bvid}.jpg`,
-    coverRemote: v.pic ? (v.pic.startsWith('//') ? 'https:' + v.pic : v.pic) : '',
+    cover: `videos/bilibili/${v.bvid}.webp`,
+    coverRemote: v.pic
+      ? (v.pic.startsWith('//') ? 'https:' + v.pic : v.pic.replace(/^http:/, 'https:')) + COVER_SUFFIX
+      : '',
     created: v.created || 0,
     play: v.play || 0,
   }));
@@ -98,30 +105,12 @@ async function downloadCover(video) {
   fs.mkdirSync(path.dirname(dest), { recursive: true });
   fs.writeFileSync(dest, buf);
 
-  const before = Math.round(buf.length / 1024);
-  // 压到宽度 720，去掉元数据 —— B 站原图动辄 300KB，压完通常 60~90KB
-  if (HAS_FFMPEG) {
-    const tmp = dest + '.tmp.jpg';
-    try {
-      execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', dest,
-        '-vf', 'scale=720:-2', '-q:v', '5', '-map_metadata', '-1', tmp], { stdio: 'ignore' });
-      fs.renameSync(tmp, dest);
-    } catch (e) {
-      console.warn(`  · ffmpeg 压缩失败：${e.message}`);
-      try { fs.unlinkSync(tmp); } catch {}
-    }
-  } else {
-    console.warn('  · 未找到 ffmpeg，跳过压缩');
-  }
-  const after = Math.round(fs.statSync(dest).size / 1024);
-  return after < before ? `${before} KB → ${after} KB` : `${after} KB`;
+  return `${Math.round(buf.length / 1024)} KB`;
 }
 
 (async () => {
   fs.mkdirSync(DATA_DIR, { recursive: true });
   fs.mkdirSync(COVER_DIR, { recursive: true });
-
-  console.log('ffmpeg 可用: ' + HAS_FFMPEG + '  Node ' + process.version);
 
   const out = { updated: new Date().toISOString(), authors: [] };
   let ok = 0;
