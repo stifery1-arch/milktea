@@ -87,9 +87,9 @@ const PAY_CONFIG = {
 
 作者新视频的同步有三层保障，越靠前越实时：
 
-**① 本机定时同步（主要，每 6 小时）**
+**① 本机定时同步（主要，每天 09:00）**
 
-Windows 计划任务 `MilkteaSync` 每 6 小时运行 `tools/sync-and-push.ps1`：
+Windows 计划任务 `MilkteaSync` 每天 09:00 运行 `tools/sync-and-push.ps1`（电脑关机时会顺延到下次开机补跑）：
 抓取 → 有变化就提交 → 推送。推送会触发 CI，自动部署到两个站点。
 
 > **为什么必须在你的电脑上跑？**
