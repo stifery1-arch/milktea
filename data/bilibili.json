@@ -1,21 +1,10 @@
 {
-  "updated": "2026-10-05T18:29:48.287Z",
+  "updated": "2026-10-05T18:43:49.426Z",
   "authors": [
     {
       "mid": 1997403556,
       "name": "AI搅拌手",
-      "videos": [
-        {
-          "bvid": "BV1Vza76pE3z",
-          "title": "Minimax H3导演台支持复制和切换分镜，UI的统一升级调整！一个Minimax H3全能工作流，玩转Minimax，音画同步、文生视频、图生视频、首尾帧、",
-          "duration": "03:45",
-          "url": "https://www.bilibili.com/video/BV1Vza76pE3z/",
-          "embed": "https://player.bilibili.com/player.html?bvid=BV1Vza76pE3z&high_quality=1&danmaku=0",
-          "cover": "videos/bilibili/BV1Vza76pE3z.webp",
-          "created": 1790654509,
-          "play": 3376
-        }
-      ]
+      "videos": []
     }
   ]
 }
