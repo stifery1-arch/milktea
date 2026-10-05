@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#FDF9F3">
+<meta name="description" content="请我喝杯奶茶 · 一个轻巧、体面、10 秒完成的创作者打赏页。">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>请我喝杯奶茶 · 支持喜欢的创作者</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧋</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header id="siteHeader">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <span class="mark">🧋</span>
+      <span id="brandName">请我喝杯奶茶</span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="#creators">创作者</a>
+      <a href="#how">怎么用</a>
+      <a href="wall.html">口碑墙</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" aria-label="切换深色模式" title="切换深色模式">🌙</button>
+      <button class="btn btn-primary header-cta" onclick="quickDonate()">请我喝一杯</button>
+    </div>
+  </div>
+  <nav class="mobile-nav" aria-label="移动导航">
+    <a href="index.html" class="active">首页</a>
+    <a href="#creators">创作者</a>
+    <a href="wall.html">口碑墙</a>
+    <a href="#faq">问答</a>
+  </nav>
+</header>
+
+
+<main id="top">
+  <!-- ============ Hero ============ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">✨ 无需注册 · 扫码即赏</span>
+        <h1>喜欢 TA 的创作？<br><span class="hl">请我喝杯奶茶</span>吧</h1>
+        <p class="hero-sub">一个小小的打赏页：选金额、扫码、完成，全程不到 10 秒。你的每一份支持，都会变成下一杯续命奶茶。</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#creators">🎁 选一位创作者</a>
+          <a class="btn btn-ghost" href="#how">看看怎么用</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><b id="statCreators">3</b><span>位创作者</span></div>
+          <div class="stat"><b id="statSupporters">566</b><span>次暖心支持</span></div>
+          <div class="stat"><b>10s</b><span>平均完成时间</span></div>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <span class="blob b1">☕</span>
+        <span class="blob b2">🧋</span>
+        <span class="blob b3">💛</span>
+        <div class="phone">
+          <div class="notch"></div>
+          <div class="p-hero">
+            <span class="cup">🧋</span>
+            <h3>支持喜欢的创作者</h3>
+            <p>扫码即赏 · 10 秒完成</p>
+          </div>
+          <div class="p-list" id="phoneList"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 创作者 ============ -->
+  <section class="section" id="creators" style="background:var(--bg-soft)">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">🔥 热门创作者</span>
+        <h2>挑一位，请 TA 喝一杯</h2>
+        <p>每位创作者都有一段想说的话。你的支持会实时显示在 TA 的支持数里。</p>
+      </div>
+
+      <div class="toolbar">
+        <label class="search">
+          <span class="ico">🔍</span>
+          <input id="searchInput" type="search" placeholder="搜索创作者或关键词…" autocomplete="off">
+          <span class="sr-only">搜索创作者</span>
+        </label>
+        <div class="filters" id="filters" role="group" aria-label="按标签筛选"></div>
+      </div>
+
+      <div class="creator-grid" id="creatorList"></div>
+    </div>
+  </section>
+
+  <!-- ============ 流程 ============ -->
+  <section class="section" id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">🧭 怎么用</span>
+        <h2>三步，请你喝杯奶茶</h2>
+        <p>不用注册账号，不用绑定银行卡，也不会收集你的任何隐私信息。</p>
+      </div>
+      <div class="steps">
+        <article class="card step">
+          <div class="num">1</div>
+          <h3>选一位创作者</h3>
+          <p>在列表里找到你想支持的人，点击「请喝一杯」打开打赏面板。</p>
+        </article>
+        <article class="card step">
+          <div class="num">2</div>
+          <h3>选金额并扫码</h3>
+          <p>选择 ¥10 / ¥20 等预设金额，或输入自定义金额，然后扫码付款。</p>
+        </article>
+        <article class="card step">
+          <div class="num">3</div>
+          <h3>完成，领取回礼</h3>
+          <p>点击「我已完成付款」，页面会给出网盘提取码，或引导你到浏览器打开链接。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section" id="faq" style="background:var(--bg-soft)">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">❓ 常见问题</span>
+        <h2>你可能想知道的</h2>
+      </div>
+      <div class="faq">
+        <details class="card qa" open>
+          <summary>打赏的钱会到哪里？ <span class="plus">+</span></summary>
+          <div class="ans">所有打赏都通过页面上的微信 / 支付宝收款码直接进入创作者本人的账户，本站不参与任何资金中转，也不会记录你的付款信息。</div>
+        </details>
+        <details class="card qa">
+          <summary>为什么在微信里点不开网盘链接？ <span class="plus">+</span></summary>
+          <div class="ans">微信、QQ 内置浏览器会拦截外部网盘链接。付款完成后再确认付款后，页面会显示提取码并教你如何「在浏览器打开」，按提示操作即可。</div>
+        </details>
+        <details class="card qa">
+          <summary>可以只打赏 ¥1 吗？ <span class="plus">+</span></summary>
+          <div class="ans">当然可以。选择「自定义」后输入任意金额即可，一分钱也是心意。金额仅用于生成付款提示，页面不会自动扣款。</div>
+        </details>
+        <details class="card qa">
+          <summary>付款后没收到回礼怎么办？ <span class="plus">+</span></summary>
+          <div class="ans">请先确认提取码是否复制正确，或直接联系创作者说明你的付款时间与金额，TA 会尽快为你重新发送。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-band">
+        <h2>你的支持，是最好的续命水</h2>
+        <p>每一杯奶茶都会变成下一次更新的动力。现在就选一位创作者，把心意送出去吧。</p>
+        <button class="btn" onclick="quickDonate()">🧋 立即请 TA 喝一杯</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="fbrand"><span>🧋</span><span id="footBrand">请我喝杯奶茶</span></div>
+      <div>用一杯奶茶的时间，支持你在意的人 · <span id="year"></span></div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ 打赏面板 ============ -->
+<div class="mask" id="sheetMask" onclick="closeSheet()"></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="打赏面板">
+  <!-- 第一步：金额 -->
+  <div id="stepAmount">
+    <div class="grabber"></div>
+    <div class="sheet-head">
+      <div class="av" id="mAvatar">🧋</div>
+      <div>
+        <h2 id="mName">支持创作者</h2>
+        <p id="mDesc"></p>
+      </div>
+      <button class="sheet-close" onclick="closeSheet()" aria-label="关闭">✕</button>
+    </div>
+
+    <div class="field-label"><span>选择金额</span><span>人民币 CNY</span></div>
+    <div class="amount-grid" id="amountGrid">
+      <button data-v="5"  onclick="pick(this)">¥5</button>
+      <button data-v="10" onclick="pick(this)">¥10</button>
+      <button data-v="20" class="active" onclick="pick(this)">¥20</button>
+      <button data-v="35" onclick="pick(this)">¥35</button>
+      <button data-v="68" onclick="pick(this)">¥68</button>
+      <button data-v="custom" onclick="pick(this)">自定义</button>
+    </div>
+
+    <div class="custom-row" id="customRow">
+      <div class="custom-wrap">
+        <span class="cny">¥</span>
+        <input type="text" inputmode="decimal" id="customInput" placeholder="输入金额" autocomplete="off" oninput="updatePayBtn()">
+      </div>
+    </div>
+
+    <div class="field-label"><span>留句话（可选）</span><span id="msgCount">0/60</span></div>
+    <textarea class="msg" id="mMsg" maxlength="60" placeholder="说点什么鼓励一下…"></textarea>
+    <div class="quick-msg" id="quickMsg"></div>
+
+    <button class="pay-btn" id="payBtn" onclick="showQR()">去支付 ¥20 →</button>
+    <div class="secure-note">🔒 扫码付款 · 不收集任何个人信息</div>
+  </div>
+
+  <!-- 第二步：扫码 -->
+  <div class="qr-view" id="stepQR">
+    <div class="grabber"></div>
+    <div class="sheet-head">
+      <div class="av" id="qrAvatar">🧋</div>
+      <div>
+        <h2>扫码付款</h2>
+        <p id="qrDesc">支持创作者</p>
+      </div>
+      <button class="sheet-close" onclick="closeSheet()" aria-label="关闭">✕</button>
+    </div>
+
+    <div class="qr-amount">
+      <div class="lbl">支付金额</div>
+      <div class="val">¥<span id="qrAmount">20</span></div>
+    </div>
+
+    <div class="qr-tabs">
+      <button id="tabWx" class="active-wx" onclick="switchPay('wx')">💚 微信支付</button>
+      <button id="tabAli" onclick="switchPay('ali')">💙 支付宝</button>
+    </div>
+
+    <div class="qr-frame" id="qrFrame">
+      <img id="qrImg" alt="收款码">
+      <div class="qr-fallback">
+        <div class="ic">🖼️</div>
+        <b>收款码还没放进来</b>
+        <span>把微信收款码命名为 <code>1.png</code>，<br>支付宝收款码命名为 <code>alipay_qr.jpg</code>，<br>放到网页同一个文件夹即可自动显示。</span>
+      </div>
+    </div>
+    <div class="qr-hint" id="qrHint"></div>
+    <button class="copy-amount" id="copyAmount" onclick="copyAmount()">📋 复制金额 ¥<span id="copyAmountVal">20</span></button>
+
+    <button class="pay-btn" onclick="finishPay()">我已完成付款 ✓</button>
+    <span class="back-link" onclick="backToAmount()">← 返回修改金额</span>
+    <div class="secure-note">付款由微信 / 支付宝官方完成，本页面不接入支付接口</div>
+  </div>
+</div>
+
+<!-- ============ 成功弹窗 ============ -->
+<div class="overlay" id="successOverlay">
+  <div class="modal">
+    <div class="check">✓</div>
+    <h2>感谢你的支持！</h2>
+    <p class="lead" id="successLead">你请 <b id="successName">创作者</b> 喝了一杯奶茶 🧋<br>TA 一定会很开心的。</p>
+    <div class="code-card" id="codeCard">
+      <div class="k">📦 网盘提取码</div>
+      <div class="v" id="codeVal">----</div>
+      <button class="btn btn-ghost btn-block" onclick="copyCode()">📋 复制提取码</button>
+    </div>
+    <div class="modal-actions">
+      <a class="btn btn-primary btn-block" id="netdiskBtn" href="#" target="_blank" rel="noopener">🌐 打开网盘链接</a>
+      <button class="btn btn-ghost btn-block" onclick="closeSuccess()">先留在本页</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 浏览器引导弹窗 ============ -->
+<div class="overlay" id="guideOverlay">
+  <div class="modal">
+    <div style="font-size:46px">🌐</div>
+    <h2>请在浏览器中打开网盘</h2>
+    <p class="lead">微信 / QQ 内置浏览器无法直接跳转网盘<br>按下面三步操作即可：</p>
+    <ul class="guide-steps">
+      <li><b>①</b><span>点击右上角「···」按钮</span></li>
+      <li><b>②</b><span>选择「在浏览器打开」</span></li>
+      <li><b>③</b><span>在新页面粘贴下方提取码</span></li>
+    </ul>
+    <div class="code-card">
+      <div class="k">📦 网盘提取码</div>
+      <div class="v" id="guideCode">----</div>
+      <button class="btn btn-ghost btn-block" onclick="copyCode()">📋 复制提取码</button>
+    </div>
+    <span class="linkish" onclick="closeGuide()">← 先留在本页</span>
+  </div>
+</div>
+
+<div id="toasts" aria-live="polite"></div>
+<button class="fab" onclick="quickDonate()" aria-label="请我喝一杯">🧋<span class="fab-label">请喝一杯</span></button>
+
+<script src="app.js" defer></script>
+</body>
+</html>
