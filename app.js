@@ -529,6 +529,7 @@ function renderWall() {
               <span class="vplay">▶</span>
               ${v.duration ? `<span class="vdur">${v.duration}</span>` : ""}
               <span class="pbadge" style="background:${sec.tint};color:${sec.accent}">${sec.name}</span>
+              ${it.fresh ? `<span class="vfresh">NEW</span>` : ""}
             </div>
             ${(v.title || it.title) ? `<p class="vtitle">${v.title || it.title}</p>` : ""}
             <p class="qtext">${it.text}</p>
@@ -575,6 +576,64 @@ function renderWall() {
     }, { passive: false });
     updateWallNav(sec.id);
   });
+}
+
+/* ---------- 作者最新作品同步 ----------
+ * data/bilibili.json 由 GitHub Actions 定时抓取生成（见 tools/fetch-feeds.mjs），
+ * 与页面同源，不需要跨域。没有这个文件就静默跳过，保持手工列表。
+ */
+async function loadFeeds() {
+  if (!document.getElementById("wallSections")) return;
+  let feed;
+  try {
+    const res = await fetch("data/bilibili.json", { cache: "no-store" });
+    if (!res.ok) return;
+    feed = await res.json();
+  } catch (e) { return; }
+
+  const sec = WALL_SECTIONS.find(s => s.id === "bilibili");
+  const authors = Array.isArray(feed.authors) ? feed.authors : [];
+  if (!sec || !authors.length) return;
+
+  // 手工列表里已经有的，不重复展示
+  const listed = new Set(
+    sec.items.map(it => ((it.url || "").match(/BV[0-9A-Za-z]+/) || [])[0]).filter(Boolean)
+  );
+
+  const fresh = [];
+  for (const a of authors) {
+    for (const v of (a.videos || [])) {
+      if (!v || !v.bvid || listed.has(v.bvid)) continue;
+      listed.add(v.bvid);
+      fresh.push({
+        name: a.name || "作者",
+        handle: "@" + (a.name || ""),
+        emoji: "🎬", av: "#E3F4FB", likes: "", fresh: true,
+        url: v.url,
+        video: { title: v.title, duration: v.duration, cover: v.cover, embed: v.embed },
+        text: v.created
+          ? "自动同步 · " + new Date(v.created * 1000).toLocaleDateString("zh-CN") + " 发布"
+          : "自动同步",
+      });
+      if (fresh.length >= 4) break;
+    }
+    if (fresh.length >= 4) break;
+  }
+
+  if (fresh.length) {
+    sec.items = fresh.concat(sec.items);
+    renderWall();
+  }
+
+  const box = document.getElementById("wallSync");
+  const txt = document.getElementById("wallSyncText");
+  if (box && txt && feed.updated) {
+    const d = new Date(feed.updated);
+    const pad = n => String(n).padStart(2, "0");
+    txt.textContent = "作者新视频自动同步 · 最后更新 "
+      + (d.getMonth() + 1) + "月" + d.getDate() + "日 " + pad(d.getHours()) + ":" + pad(d.getMinutes());
+    box.hidden = false;
+  }
 }
 
 function wallScroll(id, dir) {
@@ -678,6 +737,7 @@ if (msgInputEl) msgInputEl.addEventListener("input", e => {
 
   renderQuickMsgs();
   renderWall();
+  loadFeeds();
 
   // 微信 / QQ 内置浏览器会拦截微博、小红书、抖音的外链
   const wallTip = document.getElementById("wallTip");
