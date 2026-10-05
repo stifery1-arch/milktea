@@ -26,11 +26,9 @@ jobs:
       - name: 检出代码
         uses: actions/checkout@v4
 
-      # 首次运行会自动开启仓库的 Pages（需要 pages: write 权限）
+      # Pages 已在仓库设置里开启（来源 = GitHub Actions），这里只读取配置
       - name: 配置 Pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       # 复制一份干净副本，排除 .git / .github，避免把仓库历史打进产物
       - name: 准备发布目录
