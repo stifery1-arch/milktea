@@ -1,9 +1,11 @@
-# 把「请我喝杯奶茶」站点发布到 GitHub Pages
-# 触发：推送到 main / 定时同步 / 手动运行
+# 发布「请我喝杯奶茶」站点
+#   → Cloudflare Pages（主站，milktea-6cm.pages.dev）
+#   → GitHub Pages（备用）
 #
+# 触发：推送到 main / 定时同步 / 手动运行
 # 同步结果（data/bilibili.json + webp 封面）会提交回仓库，
-# 这样某次抓取失败时，页面仍显示上一次的数据，而不是整块消失。
-name: Deploy to GitHub Pages
+# 这样某次抓取失败时，页面仍显示上一次的数据。
+name: Build & Deploy
 
 on:
   push:
@@ -19,7 +21,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: deploy
   cancel-in-progress: true
 
 jobs:
@@ -35,9 +37,9 @@ jobs:
       - name: 准备 Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version-file: '.nvmrc'
 
-      # 抓取失败不影响发布：脚本内部已做容错，失败时保留仓库里上一次的数据
+      # 抓取失败不影响发布：脚本内部已做容错（空间接口失败会自动降级到详情接口）
       - name: 同步作者最新视频
         continue-on-error: true
         run: node tools/fetch-feeds.mjs
@@ -56,24 +58,27 @@ jobs:
             git push
           fi
 
-      # Pages 已在仓库设置里开启（来源 = GitHub Actions），这里只读取配置
-      - name: 配置 Pages
-        uses: actions/configure-pages@v5
-
-      # 复制一份干净副本，排除 .git / .github / _site，避免把仓库历史打进产物
-      - name: 准备发布目录
+      - name: 生成发布目录
         run: |
-          mkdir -p _site
-          rsync -a --exclude='.git' --exclude='.github' --exclude='_site' ./ _site/
-          echo "--- 发布内容 ---"
-          find _site -maxdepth 2 | head -30
-          du -sh _site
+          node tools/build-site.mjs
+          du -sh dist
+
+      # ---------- 主站：Cloudflare Pages ----------
+      - name: 发布到 Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx --yes wrangler@latest pages deploy dist --project-name=milktea --branch=main
+
+      # ---------- 备用：GitHub Pages ----------
+      - name: 配置 GitHub Pages
+        uses: actions/configure-pages@v5
 
       - name: 上传站点产物
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: dist
 
-      - name: 发布到 Pages
+      - name: 发布到 GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

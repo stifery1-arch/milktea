@@ -1,0 +1,8 @@
+{
+  // Cloudflare Pages 配置（不是 Workers）
+  // 部署：npx wrangler pages deploy --project-name=milktea
+  // 或用项目里的 npm run deploy
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "milktea",
+  "pages_build_output_dir": "dist"
+}

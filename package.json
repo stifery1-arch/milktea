@@ -7,10 +7,11 @@
   "scripts": {
     "build": "node tools/fetch-feeds.mjs && node tools/build-site.mjs",
     "build:site": "node tools/build-site.mjs",
-    "fetch": "node tools/fetch-feeds.mjs"
+    "fetch": "node tools/fetch-feeds.mjs",
+    "deploy:cf": "wrangler pages deploy dist --project-name=milktea",
+    "preview:cf": "wrangler pages dev dist"
   },
   "engines": {
     "node": ">=18"
   }
 }
-
