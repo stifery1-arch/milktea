@@ -15,6 +15,12 @@ const PAY_CONFIG = {
   site_name: "请我喝杯奶茶",
   // ⑥ 预设金额
   amounts: [5, 10, 20, 35, 68],
+
+  // ⑦ 直接支付链接（「无需二维码」模式）
+  //    填上就【不显示收款码】，点绿色按钮直接跳到微信完成支付。
+  //    适合：微信支付 H5 链接、第三方聚合支付（虎皮椒 / PayJS / 蓝兔等）给的收款链接。
+  //    留空 "" 则走上面的收款码图片。
+  pay_link: "",
 };
 
 /* 创作者列表：可自由增删改
@@ -248,6 +254,32 @@ function switchPay(m) {
   document.getElementById("qrHint").innerHTML = wx
     ? "截图保存二维码 → 打开微信「扫一扫」<br>选择相册中的截图即可付款"
     : "截图保存二维码 → 打开支付宝「扫一扫」<br>选择相册中的截图即可付款";
+  applyPayMode();
+}
+
+/* 收款码 / 直接支付链接 两种模式切换 */
+function applyPayMode() {
+  const link = (PAY_CONFIG.pay_link || "").trim();
+  const tabs  = document.querySelector(".qr-tabs");
+  const frame = document.getElementById("qrFrame");
+  const hint  = document.getElementById("qrHint");
+  const direct = document.getElementById("directPay");
+  const title  = document.getElementById("qrTitle");
+  if (!direct || !frame) return;
+  if (title) title.textContent = link ? "微信支付" : "扫码付款";
+
+  if (link) {
+    // 「无需二维码」模式
+    if (tabs) tabs.style.display = "none";
+    frame.style.display = "none";
+    direct.href = link;
+    direct.hidden = false;
+    if (hint) hint.innerHTML = "点击上方绿色按钮跳到微信完成支付<br>付完后回来点「我已完成付款」";
+  } else {
+    if (tabs) tabs.style.display = "grid";
+    frame.style.display = "grid";
+    direct.hidden = true;
+  }
 }
 
 /* ---------- 支付完成 ---------- */

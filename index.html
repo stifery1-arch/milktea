@@ -218,7 +218,7 @@
     <div class="sheet-head">
       <div class="av" id="qrAvatar">🧋</div>
       <div>
-        <h2>扫码付款</h2>
+        <h2 id="qrTitle">扫码付款</h2>
         <p id="qrDesc">支持创作者</p>
       </div>
       <button class="sheet-close" onclick="closeSheet()" aria-label="关闭">✕</button>
@@ -233,6 +233,15 @@
       <button id="tabWx" class="active-wx" onclick="switchPay('wx')">💚 微信支付</button>
       <button id="tabAli" onclick="switchPay('ali')">💙 支付宝</button>
     </div>
+
+    <a class="pay-direct" id="directPay" href="#" target="_blank" rel="noopener" hidden>
+      <span class="pd-ic">💚</span>
+      <span class="pd-tx">
+        <b>打开微信完成支付</b>
+        <small>点击后跳转到微信，无需扫码</small>
+      </span>
+      <span class="pd-arrow">→</span>
+    </a>
 
     <div class="qr-frame" id="qrFrame">
       <img id="qrImg" alt="收款码">
