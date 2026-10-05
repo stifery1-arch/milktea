@@ -1,0 +1,12 @@
+{
+  "name": "milktea",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "请我喝杯奶茶 · 创作者打赏站 + 口碑墙",
+  "scripts": {
+    "build": "node tools/fetch-feeds.mjs && node tools/build-site.mjs",
+    "build:site": "node tools/build-site.mjs",
+    "fetch": "node tools/fetch-feeds.mjs"
+  }
+}
