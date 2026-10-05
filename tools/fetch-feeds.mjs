@@ -107,8 +107,11 @@ async function downloadCover(video) {
         '-vf', 'scale=720:-2', '-q:v', '5', '-map_metadata', '-1', tmp], { stdio: 'ignore' });
       fs.renameSync(tmp, dest);
     } catch (e) {
+      console.warn(`  · ffmpeg 压缩失败：${e.message}`);
       try { fs.unlinkSync(tmp); } catch {}
     }
+  } else {
+    console.warn('  · 未找到 ffmpeg，跳过压缩');
   }
   const after = Math.round(fs.statSync(dest).size / 1024);
   return after < before ? `${before} KB → ${after} KB` : `${after} KB`;
@@ -117,6 +120,8 @@ async function downloadCover(video) {
 (async () => {
   fs.mkdirSync(DATA_DIR, { recursive: true });
   fs.mkdirSync(COVER_DIR, { recursive: true });
+
+  console.log('ffmpeg 可用: ' + HAS_FFMPEG + '  Node ' + process.version);
 
   const out = { updated: new Date().toISOString(), authors: [] };
   let ok = 0;
