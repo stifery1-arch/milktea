@@ -12,6 +12,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import { execFileSync } from 'node:child_process';
 
 const ROOT = process.cwd();
 const DATA_DIR = path.join(ROOT, 'data');
@@ -23,11 +24,29 @@ const AUTHORS = [
 ];
 
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
+
+// GitHub 的 ubuntu runner 自带 ffmpeg；本地没有就跳过压缩，不影响功能
+const HAS_FFMPEG = (() => {
+  try { execFileSync('ffmpeg', ['-version'], { stdio: 'ignore' }); return true; } catch { return false; }
+})();
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+const fmtDur = (t) =>
+  String(Math.floor(t / 60)).padStart(2, '0') + ':' + String(t % 60).padStart(2, '0');
+
+/**
+ * B 站这个接口的 length 字段类型不固定：
+ * 有时是秒数（数字），有时是 "08:03"（字符串），两种都要兼容。
+ */
 const mmss = (s) => {
-  const t = Math.max(0, Math.floor(Number(s) || 0));
-  return String(Math.floor(t / 60)).padStart(2, '0') + ':' + String(t % 60).padStart(2, '0');
+  if (typeof s === 'string' && s.includes(':')) {
+    const p = s.split(':').map(Number);
+    if (p.every((n) => !Number.isNaN(n))) {
+      const sec = p.length === 3 ? p[0] * 3600 + p[1] * 60 + p[2] : p[0] * 60 + p[1];
+      return fmtDur(sec);
+    }
+  }
+  return fmtDur(Math.max(0, Math.floor(Number(s) || 0)));
 };
 
 /** 带重试的 fetch —— 风控是概率性的，多试几次能显著提高成功率 */
@@ -78,7 +97,21 @@ async function downloadCover(video) {
   const buf = await get(video.coverRemote, { referer: 'https://www.bilibili.com/', binary: true, tries: 3 });
   fs.mkdirSync(path.dirname(dest), { recursive: true });
   fs.writeFileSync(dest, buf);
-  return `${Math.round(buf.length / 1024)} KB`;
+
+  const before = Math.round(buf.length / 1024);
+  // 压到宽度 720，去掉元数据 —— B 站原图动辄 300KB，压完通常 60~90KB
+  if (HAS_FFMPEG) {
+    const tmp = dest + '.tmp.jpg';
+    try {
+      execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', dest,
+        '-vf', 'scale=720:-2', '-q:v', '5', '-map_metadata', '-1', tmp], { stdio: 'ignore' });
+      fs.renameSync(tmp, dest);
+    } catch (e) {
+      try { fs.unlinkSync(tmp); } catch {}
+    }
+  }
+  const after = Math.round(fs.statSync(dest).size / 1024);
+  return after < before ? `${before} KB → ${after} KB` : `${after} KB`;
 }
 
 (async () => {
@@ -117,16 +150,7 @@ async function downloadCover(video) {
     return;
   }
 
-  // 清理不再被引用的封面，避免仓库无限增长
-  const used = new Set(
-    out.authors.flatMap((a) => a.videos.map((v) => path.basename(v.cover)))
-  );
-  for (const f of fs.readdirSync(COVER_DIR)) {
-    if (!used.has(f)) {
-      fs.unlinkSync(path.join(COVER_DIR, f));
-      console.log(`  · 清理旧封面 ${f}`);
-    }
-  }
+
 
   fs.writeFileSync(
     path.join(DATA_DIR, 'bilibili.json'),
