@@ -78,7 +78,8 @@ async function get(url, { referer, tries = 6, binary = false } = {}) {
   throw lastErr;
 }
 
-async function fetchAuthor(mid, keep) {
+/** 主通道：空间投稿列表（能发现新视频，但容易被风控限流） */
+async function fetchBySpace(mid, keep) {
   const url = `https://api.bilibili.com/x/space/arc/search?mid=${mid}&ps=${keep}&pn=1&order=pubdate`;
   const j = await get(url, { referer: `https://space.bilibili.com/${mid}/video` });
   if (j.code !== 0) throw new Error(`code=${j.code} ${j.message || ''}`);
@@ -96,6 +97,60 @@ async function fetchAuthor(mid, keep) {
     created: v.created || 0,
     play: v.play || 0,
   }));
+}
+
+/** 读取上一次同步到的 bvid 列表（用于降级刷新） */
+function knownBvids() {
+  try {
+    const f = path.join(DATA_DIR, 'bilibili.json');
+    if (!fs.existsSync(f)) return [];
+    const j = JSON.parse(fs.readFileSync(f, 'utf8'));
+    return (j.authors || []).flatMap((a) => (a.videos || []).map((v) => v.bvid)).filter(Boolean);
+  } catch { return []; }
+}
+
+/**
+ * 降级通道：空间接口被限流时，用「视频详情接口」逐个刷新已有作品。
+ * 实测空间接口会返回 412 / code=-799，而详情接口宽松得多。
+ * 缺点：发现不了新视频，但能保证已收录的内容和封面保持新鲜。
+ */
+async function fetchByDetail(bvidList, keep) {
+  const ids = bvidList.slice(0, keep);
+  if (!ids.length) throw new Error('没有已知的 bvid，无法降级');
+  const out = [];
+  for (const bvid of ids) {
+    try {
+      const j = await get(`https://api.bilibili.com/x/web-interface/view?bvid=${bvid}`,
+        { referer: 'https://www.bilibili.com/', tries: 3 });
+      if (j.code !== 0) { console.warn(`  · ${bvid} 详情 code=${j.code}`); continue; }
+      const d = j.data;
+      out.push({
+        bvid,
+        title: d.title,
+        duration: mmss(d.duration),
+        url: `https://www.bilibili.com/video/${bvid}/`,
+        embed: `https://player.bilibili.com/player.html?bvid=${bvid}&high_quality=1&danmaku=0`,
+        cover: `videos/bilibili/${bvid}.webp`,
+        coverRemote: (d.pic || '').replace(/^http:/, 'https:') + COVER_SUFFIX,
+        created: d.pubdate || 0,
+        play: d.stat?.view || 0,
+      });
+    } catch (e) {
+      console.warn(`  · ${bvid} 详情失败：${e.message}`);
+    }
+    await sleep(700);
+  }
+  return out;
+}
+
+/** 先走空间接口，失败则降级到详情接口 */
+async function fetchAuthor(mid, keep) {
+  try {
+    return await fetchBySpace(mid, keep);
+  } catch (e) {
+    console.warn(`  · 空间接口失败（${e.message}），改用详情接口刷新已知作品`);
+    return await fetchByDetail(knownBvids(), keep);
+  }
 }
 
 async function downloadCover(video) {

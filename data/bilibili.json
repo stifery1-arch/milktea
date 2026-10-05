@@ -1,0 +1,71 @@
+{
+  "updated": "2026-10-05T18:29:02.086Z",
+  "authors": [
+    {
+      "mid": 1997403556,
+      "name": "AI搅拌手",
+      "videos": [
+        {
+          "bvid": "BV1Vza76pE3z",
+          "title": "Minimax H3导演台支持复制和切换分镜，UI的统一升级调整！一个Minimax H3全能工作流，玩转Minimax，音画同步、文生视频、图生视频、首尾帧、",
+          "duration": "03:45",
+          "url": "https://www.bilibili.com/video/BV1Vza76pE3z/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1Vza76pE3z&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1Vza76pE3z.webp",
+          "created": 1790654509,
+          "play": 3376
+        },
+        {
+          "bvid": "BV1Ruaq6CEXV",
+          "title": "Minimax H3导演台公共参数升级，文生视频、混合模式全都支持了！一个Minimax H3全能工作流，玩转Minimax，音画同步、文生视频、图生视频、首尾",
+          "duration": "04:17",
+          "url": "https://www.bilibili.com/video/BV1Ruaq6CEXV/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1Ruaq6CEXV&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1Ruaq6CEXV.webp",
+          "created": 1790567178,
+          "play": 3648
+        },
+        {
+          "bvid": "BV1G5aA6VEKz",
+          "title": "感谢大家！Minimax H3导演台Star数破2000啦！一个Minimax H3全能工作流，玩转Minimax，音画同步、文生视频、图生视频、首尾帧、参考图",
+          "duration": "03:18",
+          "url": "https://www.bilibili.com/video/BV1G5aA6VEKz/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1G5aA6VEKz&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1G5aA6VEKz.webp",
+          "created": 1790305200,
+          "play": 5082
+        },
+        {
+          "bvid": "BV1LCac6yER5",
+          "title": "Minimax H3导演台缓存优化，省时间和省空间选哪个？一个Minimax H3全能工作流，玩转Minimax，音画同步、文生视频、图生视频、首尾帧、参考图生",
+          "duration": "02:54",
+          "url": "https://www.bilibili.com/video/BV1LCac6yER5/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1LCac6yER5&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1LCac6yER5.webp",
+          "created": 1790223240,
+          "play": 3589
+        },
+        {
+          "bvid": "BV1Eih46HE3i",
+          "title": "ComfyUI怎么安全稳定的升级？以及怎么切换指定的版本？ ComfyUI管理大师3.6.0发布！",
+          "duration": "04:18",
+          "url": "https://www.bilibili.com/video/BV1Eih46HE3i/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1Eih46HE3i&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1Eih46HE3i.webp",
+          "created": 1790161974,
+          "play": 1353
+        },
+        {
+          "bvid": "BV1xAao6nE82",
+          "title": "Minimax H3导演台支持每个分段设置独立LoRA、公用LoRA！一个Minimax H3全能工作流，玩转Minimax，音画同步、文生视频、图生视频、",
+          "duration": "03:08",
+          "url": "https://www.bilibili.com/video/BV1xAao6nE82/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1xAao6nE82&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1xAao6nE82.webp",
+          "created": 1790742564,
+          "play": 4185
+        }
+      ]
+    }
+  ]
+}
