@@ -175,6 +175,9 @@ async function downloadCover(video) {
     console.log(`\n=== ${a.name} (mid ${a.mid}) ===`);
     try {
       const videos = await fetchAuthor(a.mid, a.keep);
+      // ⚠️ 必须挡住「0 条」：两个接口都被限流时会返回空数组，
+      //    如果当成成功就会用空数据覆盖掉仓库里的好数据。
+      if (!videos.length) throw new Error('抓到 0 条，视为抓取失败');
       console.log(`  抓到 ${videos.length} 条`);
       for (const v of videos) {
         try {
