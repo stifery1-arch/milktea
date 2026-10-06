@@ -1,10 +1,20 @@
 {
-  "updated": "2026-10-06T01:00:03.461Z",
+  "updated": "2026-10-06T01:00:28.031Z",
   "authors": [
     {
       "mid": 1997403556,
       "name": "AI搅拌手",
       "videos": [
+        {
+          "bvid": "BV1xAao6nE82",
+          "title": "Minimax H3导演台支持每个分段设置独立LoRA、公用LoRA！一个Minimax H3全能工作流，玩转Minimax，音画同步、文生视频、图生视频、",
+          "duration": "03:08",
+          "url": "https://www.bilibili.com/video/BV1xAao6nE82/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1xAao6nE82&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1xAao6nE82.webp",
+          "created": 1790742564,
+          "play": 4236
+        },
         {
           "bvid": "BV1Vza76pE3z",
           "title": "Minimax H3导演台支持复制和切换分镜，UI的统一升级调整！一个Minimax H3全能工作流，玩转Minimax，音画同步、文生视频、图生视频、首尾帧、",
@@ -54,16 +64,6 @@
           "cover": "videos/bilibili/BV1Eih46HE3i.webp",
           "created": 1790161974,
           "play": 1355
-        },
-        {
-          "bvid": "BV1xAao6nE82",
-          "title": "Minimax H3导演台支持每个分段设置独立LoRA、公用LoRA！一个Minimax H3全能工作流，玩转Minimax，音画同步、文生视频、图生视频、",
-          "duration": "03:08",
-          "url": "https://www.bilibili.com/video/BV1xAao6nE82/",
-          "embed": "https://player.bilibili.com/player.html?bvid=BV1xAao6nE82&high_quality=1&danmaku=0",
-          "cover": "videos/bilibili/BV1xAao6nE82.webp",
-          "created": 1790742564,
-          "play": 4236
         }
       ]
     }
