@@ -1,10 +1,20 @@
 {
-  "updated": "2026-10-09T01:41:54.778Z",
+  "updated": "2026-10-10T06:39:05.969Z",
   "authors": [
     {
       "mid": 1997403556,
       "name": "AI搅拌手",
       "videos": [
+        {
+          "bvid": "BV1G7ps67EaZ",
+          "title": "Minimax H3导演台停更了？正在成为高效智能生产力！一个Minimax H3全能工作流，玩转Minimax，音画同步、文生视频、图生视频、首尾帧、",
+          "duration": "02:40",
+          "url": "https://www.bilibili.com/video/BV1G7ps67EaZ/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1G7ps67EaZ&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1G7ps67EaZ.webp",
+          "created": 1791522096,
+          "play": 4340
+        },
         {
           "bvid": "BV1xAao6nE82",
           "title": "Minimax H3导演台支持每个分段设置独立LoRA、公用LoRA！一个Minimax H3全能工作流，玩转Minimax，音画同步、文生视频、图生视频、",
@@ -13,7 +23,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1xAao6nE82&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1xAao6nE82.webp",
           "created": 1790742564,
-          "play": 5660
+          "play": 5958
         },
         {
           "bvid": "BV1Vza76pE3z",
@@ -23,7 +33,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1Vza76pE3z&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1Vza76pE3z.webp",
           "created": 1790654509,
-          "play": 3795
+          "play": 3922
         },
         {
           "bvid": "BV1Ruaq6CEXV",
@@ -33,7 +43,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1Ruaq6CEXV&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1Ruaq6CEXV.webp",
           "created": 1790567178,
-          "play": 3952
+          "play": 4064
         },
         {
           "bvid": "BV1G5aA6VEKz",
@@ -43,7 +53,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1G5aA6VEKz&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1G5aA6VEKz.webp",
           "created": 1790305200,
-          "play": 5479
+          "play": 5633
         },
         {
           "bvid": "BV1LCac6yER5",
@@ -53,17 +63,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1LCac6yER5&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1LCac6yER5.webp",
           "created": 1790223240,
-          "play": 3735
-        },
-        {
-          "bvid": "BV1Eih46HE3i",
-          "title": "ComfyUI怎么安全稳定的升级？以及怎么切换指定的版本？ ComfyUI管理大师3.6.0发布！",
-          "duration": "04:18",
-          "url": "https://www.bilibili.com/video/BV1Eih46HE3i/",
-          "embed": "https://player.bilibili.com/player.html?bvid=BV1Eih46HE3i&high_quality=1&danmaku=0",
-          "cover": "videos/bilibili/BV1Eih46HE3i.webp",
-          "created": 1790161974,
-          "play": 1397
+          "play": 3793
         }
       ]
     }
