@@ -1,10 +1,50 @@
 {
-  "updated": "2026-10-11T15:18:09.552Z",
+  "updated": "2026-10-12T12:41:17.876Z",
   "authors": [
     {
       "mid": 1997403556,
       "name": "AI搅拌手",
       "videos": [
+        {
+          "bvid": "BV1qfpQ6PEW4",
+          "title": "Minimax H3导演台低显存性能优化，8G显存可跑！一个Minimax H3全能工作流，玩转Minimax，音画同步、文生视频、图生视频、首尾帧、参考图生视",
+          "duration": "01:40",
+          "url": "https://www.bilibili.com/video/BV1qfpQ6PEW4/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1qfpQ6PEW4&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1qfpQ6PEW4.webp",
+          "created": 1791778904,
+          "play": 1668
+        },
+        {
+          "bvid": "BV1G7ps67EaZ",
+          "title": "Minimax H3导演台停更了？正在成为高效智能生产力！一个Minimax H3全能工作流，玩转Minimax，音画同步、文生视频、图生视频、首尾帧、",
+          "duration": "02:40",
+          "url": "https://www.bilibili.com/video/BV1G7ps67EaZ/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1G7ps67EaZ&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1G7ps67EaZ.webp",
+          "created": 1791522096,
+          "play": 6963
+        },
+        {
+          "bvid": "BV1xAao6nE82",
+          "title": "Minimax H3导演台支持每个分段设置独立LoRA、公用LoRA！一个Minimax H3全能工作流，玩转Minimax，音画同步、文生视频、图生视频、",
+          "duration": "03:08",
+          "url": "https://www.bilibili.com/video/BV1xAao6nE82/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1xAao6nE82&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1xAao6nE82.webp",
+          "created": 1790742564,
+          "play": 6297
+        },
+        {
+          "bvid": "BV1Vza76pE3z",
+          "title": "Minimax H3导演台支持复制和切换分镜，UI的统一升级调整！一个Minimax H3全能工作流，玩转Minimax，音画同步、文生视频、图生视频、首尾帧、",
+          "duration": "03:45",
+          "url": "https://www.bilibili.com/video/BV1Vza76pE3z/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1Vza76pE3z&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1Vza76pE3z.webp",
+          "created": 1790654509,
+          "play": 4115
+        },
         {
           "bvid": "BV1Ruaq6CEXV",
           "title": "Minimax H3导演台公共参数升级，文生视频、混合模式全都支持了！一个Minimax H3全能工作流，玩转Minimax，音画同步、文生视频、图生视频、首尾",
@@ -13,7 +53,17 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1Ruaq6CEXV&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1Ruaq6CEXV.webp",
           "created": 1790567178,
-          "play": 4156
+          "play": 4230
+        },
+        {
+          "bvid": "BV1G5aA6VEKz",
+          "title": "感谢大家！Minimax H3导演台Star数破2000啦！一个Minimax H3全能工作流，玩转Minimax，音画同步、文生视频、图生视频、首尾帧、参考图",
+          "duration": "03:18",
+          "url": "https://www.bilibili.com/video/BV1G5aA6VEKz/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1G5aA6VEKz&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1G5aA6VEKz.webp",
+          "created": 1790305200,
+          "play": 5885
         }
       ]
     }
