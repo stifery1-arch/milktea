@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15T12:25:09.734Z",
+  "updated": "2026-10-15T20:52:38.612Z",
   "authors": [
     {
       "mid": 1997403556,
@@ -13,7 +13,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1G2pr6aEzh&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1G2pr6aEzh.webp",
           "created": 1791948005,
-          "play": 2577
+          "play": 2773
         },
         {
           "bvid": "BV1qfpQ6PEW4",
@@ -23,7 +23,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1qfpQ6PEW4&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1qfpQ6PEW4.webp",
           "created": 1791778904,
-          "play": 3588
+          "play": 3670
         },
         {
           "bvid": "BV1G7ps67EaZ",
@@ -33,7 +33,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1G7ps67EaZ&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1G7ps67EaZ.webp",
           "created": 1791522096,
-          "play": 7869
+          "play": 7937
         },
         {
           "bvid": "BV1xAao6nE82",
@@ -43,7 +43,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1xAao6nE82&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1xAao6nE82.webp",
           "created": 1790742564,
-          "play": 6524
+          "play": 6551
         },
         {
           "bvid": "BV1Vza76pE3z",
@@ -53,7 +53,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1Vza76pE3z&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1Vza76pE3z.webp",
           "created": 1790654509,
-          "play": 4288
+          "play": 4312
         },
         {
           "bvid": "BV1Ruaq6CEXV",
@@ -63,7 +63,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1Ruaq6CEXV&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1Ruaq6CEXV.webp",
           "created": 1790567178,
-          "play": 4399
+          "play": 4416
         }
       ]
     }
