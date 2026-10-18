@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-17T21:12:07.203Z",
+  "updated": "2026-10-18T02:46:38.862Z",
   "authors": [
     {
       "mid": 1997403556,
@@ -13,17 +13,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1G7ps67EaZ&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1G7ps67EaZ.webp",
           "created": 1791522096,
-          "play": 8172
-        },
-        {
-          "bvid": "BV1Vza76pE3z",
-          "title": "Minimax H3导演台支持复制和切换分镜，UI的统一升级调整！一个Minimax H3全能工作流，玩转Minimax，音画同步、文生视频、图生视频、首尾帧、",
-          "duration": "03:45",
-          "url": "https://www.bilibili.com/video/BV1Vza76pE3z/",
-          "embed": "https://player.bilibili.com/player.html?bvid=BV1Vza76pE3z&high_quality=1&danmaku=0",
-          "cover": "videos/bilibili/BV1Vza76pE3z.webp",
-          "created": 1790654509,
-          "play": 4387
+          "play": 8190
         }
       ]
     }
