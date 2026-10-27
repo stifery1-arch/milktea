@@ -1,60 +1,10 @@
 {
-  "updated": "2026-10-27T00:12:15.997Z",
+  "updated": "2026-10-27T11:34:46.016Z",
   "authors": [
     {
       "mid": 1997403556,
       "name": "AI搅拌手",
       "videos": [
-        {
-          "bvid": "BV1e9nd6KEkf",
-          "title": "导演大师使用教程：Ollama本地模型服务的配置和使用方法！ 导演大师-从选题、剧本、分镜、提示词到视频的全流程导演专用Agent智能体！",
-          "duration": "03:24",
-          "url": "https://www.bilibili.com/video/BV1e9nd6KEkf/",
-          "embed": "https://player.bilibili.com/player.html?bvid=BV1e9nd6KEkf&high_quality=1&danmaku=0",
-          "cover": "videos/bilibili/BV1e9nd6KEkf.webp",
-          "created": 1792999972,
-          "play": 1487
-        },
-        {
-          "bvid": "BV1riHN6zE6V",
-          "title": "短漫剧全流程Agent智能体导演大师正式发布！从选题、剧本、分镜、提示词到视频的全流程导演专用Agent智能体！",
-          "duration": "03:22",
-          "url": "https://www.bilibili.com/video/BV1riHN6zE6V/",
-          "embed": "https://player.bilibili.com/player.html?bvid=BV1riHN6zE6V&high_quality=1&danmaku=0",
-          "cover": "videos/bilibili/BV1riHN6zE6V.webp",
-          "created": 1792851563,
-          "play": 5723
-        },
-        {
-          "bvid": "BV1jWHP6fEF8",
-          "title": "导演大师使用教程：Gpt-Image2的配置和使用方法！ 导演大师-从选题、剧本、分镜、提示词到视频的全流程导演专用Agent智能体！",
-          "duration": "01:44",
-          "url": "https://www.bilibili.com/video/BV1jWHP6fEF8/",
-          "embed": "https://player.bilibili.com/player.html?bvid=BV1jWHP6fEF8&high_quality=1&danmaku=0",
-          "cover": "videos/bilibili/BV1jWHP6fEF8.webp",
-          "created": 1792850165,
-          "play": 2450
-        },
-        {
-          "bvid": "BV17HHP6cErK",
-          "title": "导演大师使用教程：DeepSeek模型配置方法！ 导演大师-从选题、剧本、分镜、提示词到视频的全流程导演专用Agent智能体！",
-          "duration": "01:25",
-          "url": "https://www.bilibili.com/video/BV17HHP6cErK/",
-          "embed": "https://player.bilibili.com/player.html?bvid=BV17HHP6cErK&high_quality=1&danmaku=0",
-          "cover": "videos/bilibili/BV17HHP6cErK.webp",
-          "created": 1792850153,
-          "play": 2455
-        },
-        {
-          "bvid": "BV1jpHP68E6A",
-          "title": "导演大师使用教程：下载、安装和使用方法！ 导演大师-从选题、剧本、分镜、提示词到视频的全流程导演专用Agent智能体！",
-          "duration": "01:45",
-          "url": "https://www.bilibili.com/video/BV1jpHP68E6A/",
-          "embed": "https://player.bilibili.com/player.html?bvid=BV1jpHP68E6A&high_quality=1&danmaku=0",
-          "cover": "videos/bilibili/BV1jpHP68E6A.webp",
-          "created": 1792850146,
-          "play": 2890
-        },
         {
           "bvid": "BV14EJe6oEY4",
           "title": "短漫剧全流程Agent智能体要来了！导演大师即将发布！选题、大纲、剧本、资产、分镜全流程自动化Agent智能体",
@@ -63,7 +13,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV14EJe6oEY4&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV14EJe6oEY4.webp",
           "created": 1792229183,
-          "play": 5678
+          "play": 5724
         }
       ]
     }
