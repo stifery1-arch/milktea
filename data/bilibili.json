@@ -1,10 +1,20 @@
 {
-  "updated": "2026-11-04T01:51:06.703Z",
+  "updated": "2026-11-07T01:33:50.538Z",
   "authors": [
     {
       "mid": 1997403556,
       "name": "AI搅拌手",
       "videos": [
+        {
+          "bvid": "BV1HY4i66EpC",
+          "title": "导演大师导入小说剧本制作短漫剧全流程演示！ 导演大师-从选题、剧本、分镜、提示词到视频的全流程导演专用Agent智能体！",
+          "duration": "07:42",
+          "url": "https://www.bilibili.com/video/BV1HY4i66EpC/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1HY4i66EpC&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1HY4i66EpC.webp",
+          "created": 1793940564,
+          "play": 1663
+        },
         {
           "bvid": "BV1sT4A6JEAy",
           "title": "导演大师短漫剧制作全流程演示！ 新手一定要看完！导演大师-从选题、剧本、分镜、提示词到视频的全流程导演专用Agent智能体！",
@@ -13,7 +23,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1sT4A6JEAy&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1sT4A6JEAy.webp",
           "created": 1793608846,
-          "play": 2402
+          "play": 3798
         },
         {
           "bvid": "BV1p6xe6PEMQ",
@@ -23,7 +33,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1p6xe6PEMQ&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1p6xe6PEMQ.webp",
           "created": 1793356403,
-          "play": 2638
+          "play": 3018
         },
         {
           "bvid": "BV1Nusf6BEtP",
@@ -33,7 +43,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1Nusf6BEtP&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1Nusf6BEtP.webp",
           "created": 1793275044,
-          "play": 1452
+          "play": 1563
         },
         {
           "bvid": "BV1ursf62Em2",
@@ -43,7 +53,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1ursf62Em2&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1ursf62Em2.webp",
           "created": 1793270666,
-          "play": 2592
+          "play": 2958
         },
         {
           "bvid": "BV1iqx56eEua",
@@ -53,17 +63,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1iqx56eEua&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1iqx56eEua.webp",
           "created": 1793158687,
-          "play": 1809
-        },
-        {
-          "bvid": "BV16jxM69EFW",
-          "title": "导演大师使用教程：智谱BigModel模型服务的配置和使用方法！ 导演大师-从选题、剧本、分镜、提示词到视频的全流程导演专用Agent智能体！",
-          "duration": "01:54",
-          "url": "https://www.bilibili.com/video/BV16jxM69EFW/",
-          "embed": "https://player.bilibili.com/player.html?bvid=BV16jxM69EFW&high_quality=1&danmaku=0",
-          "cover": "videos/bilibili/BV16jxM69EFW.webp",
-          "created": 1793086395,
-          "play": 1700
+          "play": 1953
         }
       ]
     }
