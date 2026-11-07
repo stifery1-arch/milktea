@@ -1,50 +1,10 @@
 {
-  "updated": "2026-11-07T08:14:17.128Z",
+  "updated": "2026-11-07T15:22:18.199Z",
   "authors": [
     {
       "mid": 1997403556,
       "name": "AI搅拌手",
       "videos": [
-        {
-          "bvid": "BV1HY4i66EpC",
-          "title": "导演大师导入小说剧本制作短漫剧全流程演示！ 导演大师-从选题、剧本、分镜、提示词到视频的全流程导演专用Agent智能体！",
-          "duration": "07:42",
-          "url": "https://www.bilibili.com/video/BV1HY4i66EpC/",
-          "embed": "https://player.bilibili.com/player.html?bvid=BV1HY4i66EpC&high_quality=1&danmaku=0",
-          "cover": "videos/bilibili/BV1HY4i66EpC.webp",
-          "created": 1793940564,
-          "play": 2009
-        },
-        {
-          "bvid": "BV1sT4A6JEAy",
-          "title": "导演大师短漫剧制作全流程演示！ 新手一定要看完！导演大师-从选题、剧本、分镜、提示词到视频的全流程导演专用Agent智能体！",
-          "duration": "13:00",
-          "url": "https://www.bilibili.com/video/BV1sT4A6JEAy/",
-          "embed": "https://player.bilibili.com/player.html?bvid=BV1sT4A6JEAy&high_quality=1&danmaku=0",
-          "cover": "videos/bilibili/BV1sT4A6JEAy.webp",
-          "created": 1793608846,
-          "play": 3872
-        },
-        {
-          "bvid": "BV1p6xe6PEMQ",
-          "title": "导演大师使用教程：设计、生成和绑定角色的音色！ 导演大师-从选题、剧本、分镜、提示词到视频的全流程导演专用Agent智能体！",
-          "duration": "04:49",
-          "url": "https://www.bilibili.com/video/BV1p6xe6PEMQ/",
-          "embed": "https://player.bilibili.com/player.html?bvid=BV1p6xe6PEMQ&high_quality=1&danmaku=0",
-          "cover": "videos/bilibili/BV1p6xe6PEMQ.webp",
-          "created": 1793356403,
-          "play": 3057
-        },
-        {
-          "bvid": "BV1Nusf6BEtP",
-          "title": "震惊！恐龙灭绝的真正原因竟然是这个，小行星撞地球竟然是假的？！本片由MinimaxH3导演台+导演大师制作",
-          "duration": "02:25",
-          "url": "https://www.bilibili.com/video/BV1Nusf6BEtP/",
-          "embed": "https://player.bilibili.com/player.html?bvid=BV1Nusf6BEtP&high_quality=1&danmaku=0",
-          "cover": "videos/bilibili/BV1Nusf6BEtP.webp",
-          "created": 1793275044,
-          "play": 1576
-        },
         {
           "bvid": "BV1ursf62Em2",
           "title": "导演大师使用教程：调用ComfyUI生成图片！ 导演大师-从选题、剧本、分镜、提示词到视频的全流程导演专用Agent智能体！",
@@ -53,17 +13,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1ursf62Em2&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1ursf62Em2.webp",
           "created": 1793270666,
-          "play": 2992
-        },
-        {
-          "bvid": "BV1iqx56eEua",
-          "title": "导演大师使用教程：硅基流动模型服务的配置和使用方法！ 导演大师-从选题、剧本、分镜、提示词到视频的全流程导演专用Agent智能体！",
-          "duration": "02:30",
-          "url": "https://www.bilibili.com/video/BV1iqx56eEua/",
-          "embed": "https://player.bilibili.com/player.html?bvid=BV1iqx56eEua&high_quality=1&danmaku=0",
-          "cover": "videos/bilibili/BV1iqx56eEua.webp",
-          "created": 1793158687,
-          "play": 1960
+          "play": 3021
         }
       ]
     }
