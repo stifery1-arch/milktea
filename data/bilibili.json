@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07T23:22:08.499Z",
+  "updated": "2026-11-08T11:39:23.886Z",
   "authors": [
     {
       "mid": 1997403556,
@@ -13,7 +13,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1Nusf6BEtP&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1Nusf6BEtP.webp",
           "created": 1793275044,
-          "play": 1589
+          "play": 1600
         }
       ]
     }
