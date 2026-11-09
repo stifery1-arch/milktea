@@ -1,10 +1,60 @@
 {
-  "updated": "2026-11-08T11:39:23.886Z",
+  "updated": "2026-11-09T08:59:42.255Z",
   "authors": [
     {
       "mid": 1997403556,
       "name": "AI搅拌手",
       "videos": [
+        {
+          "bvid": "BV1jAWb6TEQ3",
+          "title": "导演大师使用教程：配置和使用Kimi大模型！ 导演大师-从选题、剧本、分镜、提示词到视频的全流程导演专用Agent智能体！",
+          "duration": "03:06",
+          "url": "https://www.bilibili.com/video/BV1jAWb6TEQ3/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1jAWb6TEQ3&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1jAWb6TEQ3.webp",
+          "created": 1794213102,
+          "play": 99
+        },
+        {
+          "bvid": "BV1EqW46KEdS",
+          "title": "导演大师可以自动调用ComfyUI的MinimaxH3工作流生成视频啦！ 导演大师-从选题、剧本、分镜、提示词到视频的全流程导演专用Agent智能体！",
+          "duration": "07:14",
+          "url": "https://www.bilibili.com/video/BV1EqW46KEdS/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1EqW46KEdS&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1EqW46KEdS.webp",
+          "created": 1794198953,
+          "play": 823
+        },
+        {
+          "bvid": "BV1HY4i66EpC",
+          "title": "导演大师导入小说剧本制作短漫剧全流程演示！ 导演大师-从选题、剧本、分镜、提示词到视频的全流程导演专用Agent智能体！",
+          "duration": "07:42",
+          "url": "https://www.bilibili.com/video/BV1HY4i66EpC/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1HY4i66EpC&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1HY4i66EpC.webp",
+          "created": 1793940564,
+          "play": 2947
+        },
+        {
+          "bvid": "BV1sT4A6JEAy",
+          "title": "导演大师短漫剧制作全流程演示！ 新手一定要看完！导演大师-从选题、剧本、分镜、提示词到视频的全流程导演专用Agent智能体！",
+          "duration": "13:00",
+          "url": "https://www.bilibili.com/video/BV1sT4A6JEAy/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1sT4A6JEAy&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1sT4A6JEAy.webp",
+          "created": 1793608846,
+          "play": 4236
+        },
+        {
+          "bvid": "BV1p6xe6PEMQ",
+          "title": "导演大师使用教程：设计、生成和绑定角色的音色！ 导演大师-从选题、剧本、分镜、提示词到视频的全流程导演专用Agent智能体！",
+          "duration": "04:49",
+          "url": "https://www.bilibili.com/video/BV1p6xe6PEMQ/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1p6xe6PEMQ&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1p6xe6PEMQ.webp",
+          "created": 1793356403,
+          "play": 3217
+        },
         {
           "bvid": "BV1Nusf6BEtP",
           "title": "震惊！恐龙灭绝的真正原因竟然是这个，小行星撞地球竟然是假的？！本片由MinimaxH3导演台+导演大师制作",
@@ -13,7 +63,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1Nusf6BEtP&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1Nusf6BEtP.webp",
           "created": 1793275044,
-          "play": 1600
+          "play": 1615
         }
       ]
     }
