@@ -1,19 +1,69 @@
 {
-  "updated": "2026-11-10T23:52:45.628Z",
+  "updated": "2026-11-13T20:16:02.203Z",
   "authors": [
     {
       "mid": 1997403556,
       "name": "AI搅拌手",
       "videos": [
         {
-          "bvid": "BV1p6xe6PEMQ",
-          "title": "导演大师使用教程：设计、生成和绑定角色的音色！ 导演大师-从选题、剧本、分镜、提示词到视频的全流程导演专用Agent智能体！",
-          "duration": "04:49",
-          "url": "https://www.bilibili.com/video/BV1p6xe6PEMQ/",
-          "embed": "https://player.bilibili.com/player.html?bvid=BV1p6xe6PEMQ&high_quality=1&danmaku=0",
-          "cover": "videos/bilibili/BV1p6xe6PEMQ.webp",
-          "created": 1793356403,
-          "play": 3350
+          "bvid": "BV1LJWq6tEdg",
+          "title": "一步完成4倍视频高清放大，又快又好！ Relay VSR高清放大工作流分享！",
+          "duration": "03:42",
+          "url": "https://www.bilibili.com/video/BV1LJWq6tEdg/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1LJWq6tEdg&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1LJWq6tEdg.webp",
+          "created": 1794556059,
+          "play": 1080
+        },
+        {
+          "bvid": "BV1nAWY6XELG",
+          "title": "Minimax H3导演台导出大导演包优化，支持批量删除分段！一个Minimax H3全能工作流，玩转Minimax，音画同步、文生视频、图生视频、首尾帧、参考",
+          "duration": "01:52",
+          "url": "https://www.bilibili.com/video/BV1nAWY6XELG/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1nAWY6XELG&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1nAWY6XELG.webp",
+          "created": 1794538370,
+          "play": 1218
+        },
+        {
+          "bvid": "BV1apWd6ME8P",
+          "title": "Minimax H3导演台Pika H3 Flex 6步加速工作流免费发布！一个Minimax H3全能工作流，玩转Minimax，音画同步、文生视频、图生视频",
+          "duration": "03:20",
+          "url": "https://www.bilibili.com/video/BV1apWd6ME8P/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1apWd6ME8P&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1apWd6ME8P.webp",
+          "created": 1794474594,
+          "play": 2524
+        },
+        {
+          "bvid": "BV1StWy6NEtF",
+          "title": "有求必应！导演大师Mac版正式发布啦！ 导演大师-从选题、剧本、分镜、提示词到视频的全流程导演专用Agent智能体！",
+          "duration": "21:35",
+          "url": "https://www.bilibili.com/video/BV1StWy6NEtF/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1StWy6NEtF&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1StWy6NEtF.webp",
+          "created": 1794390582,
+          "play": 1235
+        },
+        {
+          "bvid": "BV1tyWT6fEKc",
+          "title": "导演大师制作效率大提升：加入任务队列系统，并发执行更快更高效！ 导演大师-从选题、剧本、分镜、提示词到视频的全流程导演专用Agent智能体！",
+          "duration": "07:25",
+          "url": "https://www.bilibili.com/video/BV1tyWT6fEKc/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1tyWT6fEKc&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1tyWT6fEKc.webp",
+          "created": 1794286340,
+          "play": 1945
+        },
+        {
+          "bvid": "BV1jAWb6TEQ3",
+          "title": "导演大师使用教程：配置和使用Kimi大模型！ 导演大师-从选题、剧本、分镜、提示词到视频的全流程导演专用Agent智能体！",
+          "duration": "03:06",
+          "url": "https://www.bilibili.com/video/BV1jAWb6TEQ3/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1jAWb6TEQ3&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1jAWb6TEQ3.webp",
+          "created": 1794213102,
+          "play": 1464
         }
       ]
     }
