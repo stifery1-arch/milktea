@@ -1,10 +1,50 @@
 {
-  "updated": "2026-11-21T05:22:46.964Z",
+  "updated": "2026-11-25T22:54:29.648Z",
   "authors": [
     {
       "mid": 1997403556,
       "name": "AI搅拌手",
       "videos": [
+        {
+          "bvid": "BV16ry6zkEMZ",
+          "title": "Minimax H3导演台低显存性能优化、解决SelfLift采样+段间引导问题！一个Minimax H3全能工作流，玩转Minimax，音画同步、文生视频、图",
+          "duration": "03:13",
+          "url": "https://www.bilibili.com/video/BV16ry6zkEMZ/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV16ry6zkEMZ&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV16ry6zkEMZ.webp",
+          "created": 1795595627,
+          "play": 1519
+        },
+        {
+          "bvid": "BV1HZyDzrEVY",
+          "title": "导演大师角色替换功能正式发布，支持Mac、Windows！导演大师-从选题、剧本、分镜、提示词到视频的全流程导演专用Agent智能体！",
+          "duration": "08:10",
+          "url": "https://www.bilibili.com/video/BV1HZyDzrEVY/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1HZyDzrEVY&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1HZyDzrEVY.webp",
+          "created": 1795428378,
+          "play": 1729
+        },
+        {
+          "bvid": "BV1uWyJzeECs",
+          "title": "Minimax H3导演台直出4K高清视频，支持RelayVSR高清放大！一个Minimax H3全能工作流，玩转Minimax，音画同步、文生视频、图生视频、",
+          "duration": "03:41",
+          "url": "https://www.bilibili.com/video/BV1uWyJzeECs/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1uWyJzeECs&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1uWyJzeECs.webp",
+          "created": 1795406801,
+          "play": 2964
+        },
+        {
+          "bvid": "BV1DSypzVENn",
+          "title": "挑战全网最强、最简单的视频角色替换，支持多人同时替换！导演大师MinimaxH3角色替换功能正式发布啦！",
+          "duration": "10:31",
+          "url": "https://www.bilibili.com/video/BV1DSypzVENn/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1DSypzVENn&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1DSypzVENn.webp",
+          "created": 1795170695,
+          "play": 3619
+        },
         {
           "bvid": "BV13Hsz6ZELV",
           "title": "【MiniMax H3】x【导演大师】3D卡通动画风格尝试：《当二哈混进狼群》· 高清放大版·4K",
@@ -13,7 +53,17 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV13Hsz6ZELV&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV13Hsz6ZELV.webp",
           "created": 1794906187,
-          "play": 1439
+          "play": 1668
+        },
+        {
+          "bvid": "BV1NbsA67Epm",
+          "title": "【MiniMax H3】x【导演大师】3D卡通动画风格尝试：《当二哈混进狼群》~",
+          "duration": "03:49",
+          "url": "https://www.bilibili.com/video/BV1NbsA67Epm/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1NbsA67Epm&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1NbsA67Epm.webp",
+          "created": 1794832531,
+          "play": 2074
         }
       ]
     }
