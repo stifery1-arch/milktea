@@ -1,10 +1,30 @@
 {
-  "updated": "2026-11-25T22:54:29.648Z",
+  "updated": "2026-11-26T23:27:13.110Z",
   "authors": [
     {
       "mid": 1997403556,
       "name": "AI搅拌手",
       "videos": [
+        {
+          "bvid": "BV1SdymzLEqV",
+          "title": "他真的太优雅啦！“韩立与王蝉”【非凡之爱】",
+          "duration": "01:11",
+          "url": "https://www.bilibili.com/video/BV1SdymzLEqV/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1SdymzLEqV&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1SdymzLEqV.webp",
+          "created": 1795684103,
+          "play": 744
+        },
+        {
+          "bvid": "BV1g5ymz5EwL",
+          "title": "再见！RunningHub，我清空了所有工作流！由于个人精力有限，停止维护和更新发布在 RunningHub 平台上的所有工作流。",
+          "duration": "01:05",
+          "url": "https://www.bilibili.com/video/BV1g5ymz5EwL/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1g5ymz5EwL&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1g5ymz5EwL.webp",
+          "created": 1795661251,
+          "play": 4677
+        },
         {
           "bvid": "BV16ry6zkEMZ",
           "title": "Minimax H3导演台低显存性能优化、解决SelfLift采样+段间引导问题！一个Minimax H3全能工作流，玩转Minimax，音画同步、文生视频、图",
@@ -13,7 +33,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV16ry6zkEMZ&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV16ry6zkEMZ.webp",
           "created": 1795595627,
-          "play": 1519
+          "play": 2525
         },
         {
           "bvid": "BV1HZyDzrEVY",
@@ -23,7 +43,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1HZyDzrEVY&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1HZyDzrEVY.webp",
           "created": 1795428378,
-          "play": 1729
+          "play": 1914
         },
         {
           "bvid": "BV1uWyJzeECs",
@@ -33,7 +53,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1uWyJzeECs&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1uWyJzeECs.webp",
           "created": 1795406801,
-          "play": 2964
+          "play": 3230
         },
         {
           "bvid": "BV1DSypzVENn",
@@ -43,27 +63,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1DSypzVENn&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1DSypzVENn.webp",
           "created": 1795170695,
-          "play": 3619
-        },
-        {
-          "bvid": "BV13Hsz6ZELV",
-          "title": "【MiniMax H3】x【导演大师】3D卡通动画风格尝试：《当二哈混进狼群》· 高清放大版·4K",
-          "duration": "03:49",
-          "url": "https://www.bilibili.com/video/BV13Hsz6ZELV/",
-          "embed": "https://player.bilibili.com/player.html?bvid=BV13Hsz6ZELV&high_quality=1&danmaku=0",
-          "cover": "videos/bilibili/BV13Hsz6ZELV.webp",
-          "created": 1794906187,
-          "play": 1668
-        },
-        {
-          "bvid": "BV1NbsA67Epm",
-          "title": "【MiniMax H3】x【导演大师】3D卡通动画风格尝试：《当二哈混进狼群》~",
-          "duration": "03:49",
-          "url": "https://www.bilibili.com/video/BV1NbsA67Epm/",
-          "embed": "https://player.bilibili.com/player.html?bvid=BV1NbsA67Epm&high_quality=1&danmaku=0",
-          "cover": "videos/bilibili/BV1NbsA67Epm.webp",
-          "created": 1794832531,
-          "play": 2074
+          "play": 3751
         }
       ]
     }
