@@ -1,10 +1,30 @@
 {
-  "updated": "2026-11-26T23:27:13.110Z",
+  "updated": "2026-11-27T17:09:59.539Z",
   "authors": [
     {
       "mid": 1997403556,
       "name": "AI搅拌手",
       "videos": [
+        {
+          "bvid": "BV1pe1WzTEWM",
+          "title": "Minimax H3导演台云端镜像大更新：ComfyUI本体更新、插件更新、工作流更新！一个Minimax H3全能工作流，玩转Minimax，音画同步、文生视",
+          "duration": "02:50",
+          "url": "https://www.bilibili.com/video/BV1pe1WzTEWM/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1pe1WzTEWM&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1pe1WzTEWM.webp",
+          "created": 1795767068,
+          "play": 1097
+        },
+        {
+          "bvid": "BV1eY1szdEb2",
+          "title": "这可能是最强的MinimaxH3角色替换了，既可换人，也可以换道具！导演大师-角色替换Pro版发布，可换人换物！",
+          "duration": "05:25",
+          "url": "https://www.bilibili.com/video/BV1eY1szdEb2/",
+          "embed": "https://player.bilibili.com/player.html?bvid=BV1eY1szdEb2&high_quality=1&danmaku=0",
+          "cover": "videos/bilibili/BV1eY1szdEb2.webp",
+          "created": 1795752021,
+          "play": 1382
+        },
         {
           "bvid": "BV1SdymzLEqV",
           "title": "他真的太优雅啦！“韩立与王蝉”【非凡之爱】",
@@ -13,7 +33,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1SdymzLEqV&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1SdymzLEqV.webp",
           "created": 1795684103,
-          "play": 744
+          "play": 961
         },
         {
           "bvid": "BV1g5ymz5EwL",
@@ -23,7 +43,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1g5ymz5EwL&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1g5ymz5EwL.webp",
           "created": 1795661251,
-          "play": 4677
+          "play": 6314
         },
         {
           "bvid": "BV16ry6zkEMZ",
@@ -33,7 +53,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV16ry6zkEMZ&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV16ry6zkEMZ.webp",
           "created": 1795595627,
-          "play": 2525
+          "play": 2967
         },
         {
           "bvid": "BV1HZyDzrEVY",
@@ -43,27 +63,7 @@
           "embed": "https://player.bilibili.com/player.html?bvid=BV1HZyDzrEVY&high_quality=1&danmaku=0",
           "cover": "videos/bilibili/BV1HZyDzrEVY.webp",
           "created": 1795428378,
-          "play": 1914
-        },
-        {
-          "bvid": "BV1uWyJzeECs",
-          "title": "Minimax H3导演台直出4K高清视频，支持RelayVSR高清放大！一个Minimax H3全能工作流，玩转Minimax，音画同步、文生视频、图生视频、",
-          "duration": "03:41",
-          "url": "https://www.bilibili.com/video/BV1uWyJzeECs/",
-          "embed": "https://player.bilibili.com/player.html?bvid=BV1uWyJzeECs&high_quality=1&danmaku=0",
-          "cover": "videos/bilibili/BV1uWyJzeECs.webp",
-          "created": 1795406801,
-          "play": 3230
-        },
-        {
-          "bvid": "BV1DSypzVENn",
-          "title": "挑战全网最强、最简单的视频角色替换，支持多人同时替换！导演大师MinimaxH3角色替换功能正式发布啦！",
-          "duration": "10:31",
-          "url": "https://www.bilibili.com/video/BV1DSypzVENn/",
-          "embed": "https://player.bilibili.com/player.html?bvid=BV1DSypzVENn&high_quality=1&danmaku=0",
-          "cover": "videos/bilibili/BV1DSypzVENn.webp",
-          "created": 1795170695,
-          "play": 3751
+          "play": 2043
         }
       ]
     }
